@@ -1,0 +1,22 @@
+# Unity folders
+Library/
+Temp/
+Obj/
+Build/
+Logs/
+
+# Visual Studio / Rider
+.vs/
+UserSettings/
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+
+# macOS
+.DS_Store
+
+# IDE caches
+*.swp
+*.swo

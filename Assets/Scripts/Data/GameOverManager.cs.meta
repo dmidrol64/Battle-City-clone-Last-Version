@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 700ba96f578f8d94cbb0432e4478ca32
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gameOverBackground: {fileID: 8199095931659042634, guid: b4d226625c4c9384289391fca394251e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

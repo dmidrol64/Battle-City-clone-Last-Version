@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f98f5fbf45a72c0449a3a7ef5b95b872, type: 3}
+  m_Name: Almost_Heavy_Tank
+  m_EditorClassIdentifier: 
+  baseContainerPrefab: {fileID: 5415766328837041200, guid: 2d7bb534a3368d44fa9332d5bf9c4e37, type: 3}
+  visualTankPrefab: {fileID: 5144255422875609897, guid: 2696b3c7311f4ed4181ad72ad32d6c70, type: 3}
+  maxHits: 4
+  weaponLevel: 0
+  fireRate: 2
+  spawnWeight: 10
+  moveSpeed: 5
+  scoreReward: 400
