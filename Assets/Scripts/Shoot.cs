@@ -20,6 +20,7 @@ public class Shoot : MonoBehaviour
     public int levelWeapon = 0;
 
     private PlayerMove playerMove;
+    private EnemyMove enemyMove;
     private void OnEnable()
     {
         bulletSourse = GetComponentInChildren<AudioSource>();
@@ -28,6 +29,7 @@ public class Shoot : MonoBehaviour
     {
         // Ищем скрипт игрока на родительском контейнере, чтобы понять, чья это пушка
         playerMove = GetComponentInParent<PlayerMove>();
+        enemyMove = GetComponentInParent<EnemyMove>();
         
         if (bulletPlace == null) bulletPlace = transform;
         currentRate = rate;
@@ -45,7 +47,8 @@ public class Shoot : MonoBehaviour
             currentRate -= Time.deltaTime;
         }
 
-        
+        if (enemyMove != null && enemyMove.isTurning) return;
+
         // Если пушка врага (playerMove равен null), ИИ заморожен и пули на экране закончились
         if (playerMove == null && currentRate <= 0 && EnemySpawn.IsTimeFrozen == false && GetActiveBulletsCount() < 1)
         {
@@ -58,6 +61,7 @@ public class Shoot : MonoBehaviour
    
     public void TryFire()
     {
+        if (playerMove != null && playerMove.isTurning) return;
         // Проверяем таймер перезарядки и лимиты пуль на экране
         if (currentRate <= 0 && CanPlayerShoot())
         {
@@ -157,6 +161,7 @@ public class Shoot : MonoBehaviour
 
    private IEnumerator Fire()
     {
+        
         //анимация выстрела
         if (firePrefab != null)
         {

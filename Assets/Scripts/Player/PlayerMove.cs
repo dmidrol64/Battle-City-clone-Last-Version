@@ -19,6 +19,8 @@ public class PlayerMove : MonoBehaviour
 
     public bool isFrozen = false;
 
+    public bool isTurning = false;
+
     private void Awake()
     {
         _inputActions = new PlayerMovement();
